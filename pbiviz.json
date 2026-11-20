@@ -1,0 +1,26 @@
+{
+    "visual": {
+        "name": "dumbbellVisual",
+        "displayName": "Dumbbell Chart",
+        "guid": "dumbbellVisualE9EEA7DA16DB42DE919F87F2DF101B15",
+        "visualClassName": "Visual",
+        "version": "1.0.0.0",
+        "description": "Dumbbell chart comparing two values (Value 1 and Value 2) per category, joined by a connector line. Includes a legend, custom value-axis range, highlighted gridline intervals, sorting, data labels and tooltips with configurable decimal places.",
+        "supportUrl": "https://github.com/madera-county-it/powerbi-dumbbell-visual",
+        "gitHubUrl": "https://github.com/madera-county-it/powerbi-dumbbell-visual"
+    },
+    "apiVersion": "5.11.1",
+    "author": {
+        "name": "Lee Perkins",
+        "email": "lee.perkins@maderacounty.com"
+    },
+    "assets": {
+        "icon": "assets/icon.png"
+    },
+    "externalJS": null,
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": [],
+    "version": "1.0.0.0"
+}

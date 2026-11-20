@@ -1,0 +1,110 @@
+{
+    "dataRoles": [
+        { "displayName": "Category", "name": "category", "kind": "Grouping" },
+        { "displayName": "Value 1", "name": "startValue", "kind": "Measure" },
+        { "displayName": "Value 2", "name": "endValue", "kind": "Measure" },
+        { "displayName": "Tooltips", "name": "tooltips", "kind": "Measure" }
+    ],
+    "dataViewMappings": [
+        {
+            "conditions": [
+                { "category": { "max": 1 }, "startValue": { "max": 1 }, "endValue": { "max": 1 } }
+            ],
+            "categorical": {
+                "categories": {
+                    "for": { "in": "category" },
+                    "dataReductionAlgorithm": { "top": { "count": 1000 } }
+                },
+                "values": {
+                    "select": [
+                        { "bind": { "to": "startValue" } },
+                        { "bind": { "to": "endValue" } },
+                        { "for": { "in": "tooltips" } }
+                    ]
+                }
+            }
+        }
+    ],
+    "objects": {
+        "startPoint": {
+            "properties": {
+                "color": { "type": { "fill": { "solid": { "color": true } } } },
+                "radius": { "type": { "numeric": true } }
+            }
+        },
+        "endPoint": {
+            "properties": {
+                "color": { "type": { "fill": { "solid": { "color": true } } } },
+                "radius": { "type": { "numeric": true } }
+            }
+        },
+        "legend": {
+            "properties": {
+                "show": { "type": { "bool": true } },
+                "position": { "type": { "enumeration": [] } },
+                "color": { "type": { "fill": { "solid": { "color": true } } } },
+                "fontSize": { "type": { "formatting": { "fontSize": true } } }
+            }
+        },
+        "tooltipFormat": {
+            "properties": {
+                "decimals": { "type": { "enumeration": [] } }
+            }
+        },
+        "connector": {
+            "properties": {
+                "color": { "type": { "fill": { "solid": { "color": true } } } },
+                "width": { "type": { "numeric": true } }
+            }
+        },
+        "dataLabels": {
+            "properties": {
+                "show": { "type": { "bool": true } },
+                "color": { "type": { "fill": { "solid": { "color": true } } } },
+                "fontSize": { "type": { "formatting": { "fontSize": true } } },
+                "displayUnits": { "type": { "formatting": { "labelDisplayUnits": true } } },
+                "decimals": { "type": { "numeric": true } }
+            }
+        },
+        "categoryAxis": {
+            "properties": {
+                "show": { "type": { "bool": true } },
+                "color": { "type": { "fill": { "solid": { "color": true } } } },
+                "fontSize": { "type": { "formatting": { "fontSize": true } } }
+            }
+        },
+        "valueAxis": {
+            "properties": {
+                "show": { "type": { "bool": true } },
+                "gridlines": { "type": { "bool": true } },
+                "customRange": { "type": { "bool": true } },
+                "min": { "type": { "numeric": true } },
+                "max": { "type": { "numeric": true } },
+                "highlight": { "type": { "bool": true } },
+                "highlightInterval": { "type": { "numeric": true } },
+                "highlightOffset": { "type": { "numeric": true } },
+                "highlightColor": { "type": { "fill": { "solid": { "color": true } } } },
+                "highlightWidth": { "type": { "numeric": true } },
+                "color": { "type": { "fill": { "solid": { "color": true } } } },
+                "fontSize": { "type": { "formatting": { "fontSize": true } } }
+            }
+        },
+        "sorting": {
+            "properties": {
+                "mode": { "type": { "enumeration": [] } },
+                "direction": { "type": { "enumeration": [] } }
+            }
+        }
+    },
+    "sorting": { "default": {} },
+    "supportsHighlight": true,
+    "supportsMultiVisualSelection": true,
+    "supportsKeyboardFocus": true,
+    "supportsLandingPage": true,
+    "suppressDefaultTitle": false,
+    "tooltips": {
+        "supportedTypes": { "default": true, "canvas": true },
+        "roles": ["tooltips"]
+    },
+    "privileges": []
+}

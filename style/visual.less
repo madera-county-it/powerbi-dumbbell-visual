@@ -1,0 +1,51 @@
+@grid-color: #E6E6E6;
+@message-color: #8A8886;
+
+.dumbbell-chart {
+    display: block;
+    overflow: hidden;
+    user-select: none;
+
+    .gridlines line {
+        stroke: @grid-color;
+        stroke-width: 1;
+        shape-rendering: crispEdges;
+    }
+
+    .gridlines-major line {
+        shape-rendering: crispEdges;
+    }
+
+    .row {
+        cursor: pointer;
+        outline: none;
+
+        .hit-area {
+            fill: transparent;
+        }
+
+        .connector {
+            stroke-linecap: round;
+        }
+
+        .dot {
+            stroke: #FFFFFF;
+            stroke-width: 1;
+        }
+
+        &:focus-visible .hit-area {
+            stroke: #252423;
+            stroke-width: 1;
+            stroke-dasharray: 3 2;
+        }
+    }
+
+    .label {
+        pointer-events: none;
+    }
+
+    .message {
+        fill: @message-color;
+        font-size: 13px;
+    }
+}
